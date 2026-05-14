@@ -1,0 +1,65 @@
+[
+  {
+    "file": "main.c",
+    "arguments": [
+      "/usr/bin/arm-none-eabi-gcc",
+      "-c",
+      "-mcpu=cortex-m4",
+      "-mthumb",
+      "-std=gnu11",
+      "-I",
+      "CMSIS/Include",
+      "-I",
+      "CMSIS/Device/ST/STM32F4xx/Include",
+      "-I",
+      "includes",
+      "main.c",
+      "-o",
+      "main.o"
+    ],
+    "directory": "/home/andrew/Repos/gbati_bare_metal_c/8_SysTick",
+    "output": "main.o"
+  },
+  {
+    "file": "stm32f446_startup.c",
+    "arguments": [
+      "/usr/bin/arm-none-eabi-gcc",
+      "-c",
+      "-mcpu=cortex-m4",
+      "-mthumb",
+      "-std=gnu11",
+      "-I",
+      "CMSIS/Include",
+      "-I",
+      "CMSIS/Device/ST/STM32F4xx/Include",
+      "-I",
+      "includes",
+      "stm32f446_startup.c",
+      "-o",
+      "stm32f446_startup.o"
+    ],
+    "directory": "/home/andrew/Repos/gbati_bare_metal_c/8_SysTick",
+    "output": "stm32f446_startup.o"
+  },
+  {
+    "file": "gpio.c",
+    "arguments": [
+      "/usr/bin/arm-none-eabi-gcc",
+      "-c",
+      "-mcpu=cortex-m4",
+      "-mthumb",
+      "-std=gnu11",
+      "-I",
+      "CMSIS/Include",
+      "-I",
+      "CMSIS/Device/ST/STM32F4xx/Include",
+      "-I",
+      "includes",
+      "gpio.c",
+      "-o",
+      "gpio.o"
+    ],
+    "directory": "/home/andrew/Repos/gbati_bare_metal_c/8_SysTick",
+    "output": "gpio.o"
+  }
+]
