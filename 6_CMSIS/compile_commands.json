@@ -1,0 +1,40 @@
+[
+  {
+    "file": "main.c",
+    "arguments": [
+      "/usr/bin/arm-none-eabi-gcc",
+      "-c",
+      "-mcpu=cortex-m4",
+      "-mthumb",
+      "-std=gnu11",
+      "-I",
+      "CMSIS/Include",
+      "-I",
+      "CMSIS/Device/ST/STM32F4xx/Include",
+      "main.c",
+      "-o",
+      "main.o"
+    ],
+    "directory": "/home/andrew/Repos/gbati_bare_metal_c/6_CMSIS",
+    "output": "main.o"
+  },
+  {
+    "file": "stm32f446_startup.c",
+    "arguments": [
+      "/usr/bin/arm-none-eabi-gcc",
+      "-c",
+      "-mcpu=cortex-m4",
+      "-mthumb",
+      "-std=gnu11",
+      "-I",
+      "CMSIS/Include",
+      "-I",
+      "CMSIS/Device/ST/STM32F4xx/Include",
+      "stm32f446_startup.c",
+      "-o",
+      "stm32f446_startup.o"
+    ],
+    "directory": "/home/andrew/Repos/gbati_bare_metal_c/6_CMSIS",
+    "output": "stm32f446_startup.o"
+  }
+]
