@@ -1,0 +1,23 @@
+[
+  {
+    "file": "main.c",
+    "arguments": [
+      "/usr/bin/arm-none-eabi-gcc",
+      "-c",
+      "-mcpu=cortex-m4",
+      "-mthumb",
+      "-std=gnu11",
+      "-I",
+      "CMSIS/Include",
+      "-I",
+      "CMSIS/Device/ST/STM32F4xx/Include",
+      "-I",
+      "includes",
+      "main.c",
+      "-o",
+      "main.o"
+    ],
+    "directory": "/home/andrew/Repos/gbati_bare_metal_c/9_General_Timers",
+    "output": "main.o"
+  }
+]
