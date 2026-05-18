@@ -17,7 +17,7 @@
       "-o",
       "main.o"
     ],
-    "directory": "/home/andrew/Repos/gbati_bare_metal_c/8_SysTick",
+    "directory": "/home/andrew/Repos/gbati_bare_metal_c/10_UART",
     "output": "main.o"
   },
   {
@@ -38,7 +38,7 @@
       "-o",
       "stm32f446_startup.o"
     ],
-    "directory": "/home/andrew/Repos/gbati_bare_metal_c/8_SysTick",
+    "directory": "/home/andrew/Repos/gbati_bare_metal_c/10_UART",
     "output": "stm32f446_startup.o"
   },
   {
@@ -59,7 +59,49 @@
       "-o",
       "gpio.o"
     ],
-    "directory": "/home/andrew/Repos/gbati_bare_metal_c/8_SysTick",
+    "directory": "/home/andrew/Repos/gbati_bare_metal_c/10_UART",
     "output": "gpio.o"
+  },
+  {
+    "file": "systick.c",
+    "arguments": [
+      "/usr/bin/arm-none-eabi-gcc",
+      "-c",
+      "-mcpu=cortex-m4",
+      "-mthumb",
+      "-std=gnu11",
+      "-I",
+      "CMSIS/Include",
+      "-I",
+      "CMSIS/Device/ST/STM32F4xx/Include",
+      "-I",
+      "includes",
+      "systick.c",
+      "-o",
+      "systick.o"
+    ],
+    "directory": "/home/andrew/Repos/gbati_bare_metal_c/10_UART",
+    "output": "systick.o"
+  },
+  {
+    "file": "tim.c",
+    "arguments": [
+      "/usr/bin/arm-none-eabi-gcc",
+      "-c",
+      "-mcpu=cortex-m4",
+      "-mthumb",
+      "-std=gnu11",
+      "-I",
+      "CMSIS/Include",
+      "-I",
+      "CMSIS/Device/ST/STM32F4xx/Include",
+      "-I",
+      "includes",
+      "tim.c",
+      "-o",
+      "tim.o"
+    ],
+    "directory": "/home/andrew/Repos/gbati_bare_metal_c/10_UART",
+    "output": "tim.o"
   }
 ]
