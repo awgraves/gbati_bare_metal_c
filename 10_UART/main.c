@@ -1,6 +1,7 @@
 #include "tim.h"
 #include "uart.h"
 #include <stdint.h>
+#include <stdio.h>
 
 void delay_s(uint32_t s) {
   while (s > 0) {
@@ -17,7 +18,7 @@ int main(void) {
   uart_init();
   tim2_1hz_init();
 
-  uart_print("Hello from STM32! Type something and see an echo:\r\n");
+  printf("Hello from STM%d! Type something and see an echo:\r\n", 32);
 
   while (1) {
     uart_echo();

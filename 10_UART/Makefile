@@ -4,7 +4,12 @@ CFLAGS = -c -mcpu=cortex-m4 -mthumb -std=gnu11 \
 				 -I CMSIS/Device/ST/STM32F4xx/Include \
 				 -I includes \
 				 -g
-LDFLAGS = -nostdlib -T stm32_ls.ld -Wl,-Map=code.map
+LDFLAGS = -mcpu=cortex-m4 \
+					-mthumb \
+					-nostartfiles \
+					--specs=nano.specs \
+					--specs=nosys.specs \
+					-T stm32_ls.ld -Wl,-Map=code.map
 
 final : code.elf
 

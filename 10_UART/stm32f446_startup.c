@@ -1,7 +1,7 @@
 #include <stdint.h>
 
 extern uint32_t _estack;
-extern uint32_t _etext;
+extern uint32_t _la_data;
 extern uint32_t _sdata;
 extern uint32_t _edata;
 extern uint32_t _sbss;
@@ -32,7 +32,7 @@ void Reset_Handler(void) {
   uint32_t bss_mem_size = (uint32_t)&_ebss - (uint32_t)&_sbss;
 
   // init pointers to source and dest of .data section
-  uint32_t *p_src_mem = (uint32_t *)&_etext;
+  uint32_t *p_src_mem = (uint32_t *)&_la_data;
   uint32_t *p_dest_mem = (uint32_t *)&_sdata;
 
   // copy .data section from FLASH to SRAM

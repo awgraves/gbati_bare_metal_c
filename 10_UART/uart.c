@@ -21,6 +21,13 @@ int __io_putchar(int ch) {
   return ch;
 }
 
+int _write(int fd, char *ptr, int len) {
+  while (*ptr)
+    __io_putchar(*ptr++);
+
+  return len;
+}
+
 void uart_init(void) {
   // enable clock access to GPIOA
   RCC->AHB1ENR |= GPIOAEN;

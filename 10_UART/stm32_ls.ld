@@ -21,15 +21,18 @@ SECTIONS {
     *(.isr_vector_tbl)
     . = ORIGIN(FLASH)+(113 * 4); /* skip over the other unused ISR slots */
     *(.text)
+    *(.text.*)
     *(.rodata)
+    *(.rodata.*)
     . = ALIGN(4);
-    _etext = .;
   } >FLASH
 
+  _la_data = LOADADDR(.data);
   .data : {
     . = ALIGN(4);
     _sdata = .;
     *(.data)
+    *(.data.*)
     . = ALIGN(4);
     _edata = .;
   } >SRAM AT>FLASH /* VMA AT> LMA */
@@ -37,8 +40,12 @@ SECTIONS {
   .bss : {
     . = ALIGN(4);
     _sbss = .;
+    __bss_start__ = _sbss;
     *(.bss)
+    *(.bss.*)
     . = ALIGN(4);
     _ebss = .;
+    end = _ebss;
+    __bss_end__ = end;
   } >SRAM
 }
