@@ -17,8 +17,9 @@ int main(void) {
   uart_init();
   tim2_1hz_init();
 
+  uart_print("Hello from STM32! Type something and see an echo:\r\n");
+
   while (1) {
-    uart_print("Hello from STM32!\r\n");
-    delay_s(1);
+    uart_echo();
   }
 }

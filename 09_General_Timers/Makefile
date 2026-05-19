@@ -28,8 +28,13 @@ tim.o : tim.c
 code.elf : main.o stm32f446_startup.o gpio.o systick.o tim.o
 	$(CC) $(LDFLAGS) *.o -o $@
 
+.PHONY: load flash clean
+
 load:
 	openocd -f board/st_nucleo_f4.cfg
+
+flash:
+	openocd -f board/st_nucleo_f4.cfg -c "program code.elf verify reset exit"
 
 clean:
 	rm -rf *.o *.elf *.map

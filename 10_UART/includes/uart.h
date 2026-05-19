@@ -4,5 +4,6 @@
 
 void uart_init(void);
 void uart_print(const char *);
+void uart_echo(void);
 
 #endif // __USART_H__
